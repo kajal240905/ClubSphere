@@ -5,7 +5,7 @@ const sendEmail = require('../utils/sendEmail');
 const Event=require('../models/events')
 const Club=require('../models/club')
 const User=require('../models/user');
-const { useReducer } = require('react');
+
 
 
 const razorpayInstance = new Razorpay({
