@@ -19,7 +19,7 @@ export default function AddEvent() {
         const eventDateTime = new Date(`${eventDate}T${eventTime}`);
     try {
       const response = await axios.post(
-        'http://localhost:3000/loginExecutive/addEvent',
+        'https://clubsphere-production.up.railway.app/loginExecutive/addEvent',
         {
           name,
           club,
