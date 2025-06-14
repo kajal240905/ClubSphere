@@ -8,7 +8,7 @@ export default function ForgotPassword(){
  async function handleClick(){
 
     try{
-   const res=await axios.post('http://localhost:3000/forgotPassword',
+   const res=await axios.post('https://clubsphere-production.up.railway.app/forgotPassword',
    {email},
    {withCredentials:true}
    )
