@@ -12,7 +12,7 @@ export default function MaterialsSports(){
     const [materials,setMaterial]=useState([])
        async function handleClick(){
         try{
-       const res1 = await axios.get('http://localhost:3000/login/getItem',{
+       const res1 = await axios.get('https://clubsphere-production.up.railway.app/login/getItem',{
         withCredentials:'true',
         params:{
             clubQuery:'sports'
@@ -23,7 +23,7 @@ export default function MaterialsSports(){
     }
     catch(err1){
         try{
-  const res2= await axios.get('http://localhost:3000/loginExecutive/getItem',{
+  const res2= await axios.get('https://clubsphere-production.up.railway.app/loginExecutive/getItem',{
         withCredentials:'true',
         params:{
             clubQuery:'sports'
