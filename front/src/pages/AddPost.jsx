@@ -29,7 +29,7 @@ export default function AddPost() {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/loginExecutive/addPost',
+        'https://clubsphere-production.up.railway.app/loginExecutive/addPost',
         formData,
         {
           headers: {
