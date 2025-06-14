@@ -15,7 +15,7 @@ export default function Post() {
     
     try {
       const response1 = await axios.post(
-        'http://localhost:3000/login/likePost',
+        'https://clubsphere-production.up.railway.app/login/likePost',
          {postId} ,
         { withCredentials: true }
       )
@@ -31,7 +31,7 @@ export default function Post() {
     } catch (err1) {
       try{
        const response2 = await axios.post(
-        'http://localhost:3000/loginExecutive/likePost',
+        'https://clubsphere-production.up.railway.app/loginExecutive/likePost',
          {postId} ,
         { withCredentials: true }
       )
@@ -62,7 +62,7 @@ export default function Post() {
       console.log(res1.data)
     } catch (err1) {
       try{
-        const res2 = await axios.get('http://localhost:3000/loginExecutive/getAllPosts', {
+        const res2 = await axios.get('https://clubsphere-production.up.railway.app/loginExecutive/getAllPosts', {
         withCredentials: true
       })
       setPost(res2.data.posts)
@@ -77,7 +77,7 @@ export default function Post() {
 
   async function handleDelete(postId){
     try{
-     const response=await axios.post('http://localhost:3000/loginExecutive/deletePost',
+     const response=await axios.post('https://clubsphere-production.up.railway.app/loginExecutive/deletePost',
       {
       params:{
         postId
