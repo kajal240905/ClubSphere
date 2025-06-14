@@ -12,7 +12,7 @@ export default function AddEventCfac() {
   async function handleSubmit() {
     try {
       const response = await axios.post(
-        'http://localhost:3000/loginExecutive/addItem',
+        'https://clubsphere-production.up.railway.app/loginExecutive/addItem',
         {
           name,
           club,
