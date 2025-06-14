@@ -17,7 +17,7 @@ export default function PaymentForm() {
 async function freeRegister(){
 if(fee===0){
    try{
-    const response=await axios.post('http://localhost:3000/login/freeRegister',
+    const response=await axios.post('https://clubsphere-production.up.railway.app/login/freeRegister',
       {eventName,fee},
   {
       withCredentials:true
@@ -36,7 +36,7 @@ alert("Registered Successfully")
   const handlePayment = async () => {
     try {
      
-      const { data } = await axios.post('http://localhost:3000/login/createOrder', {
+      const { data } = await axios.post('https://clubsphere-production.up.railway.app/login/createOrder', {
         amount: fee,
         event:eventName
       },
