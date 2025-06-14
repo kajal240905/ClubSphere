@@ -14,7 +14,7 @@ export default function ViewParticipants() {
   async function handleSubmit() {
     try {
       const response = await axios.post(
-        'http://localhost:3000/loginExecutive/getParticipants',
+        'https://clubsphere-production.up.railway.app/loginExecutive/getParticipants',
         {
             name,
             club
