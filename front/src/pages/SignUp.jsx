@@ -25,7 +25,7 @@ export default function SignUp() {
         payload.club = club;
       }
 
-      const res = await axios.post("http://localhost:3000/register", payload, {
+      const res = await axios.post("https://clubsphere-production.up.railway.app/register", payload, {
         withCredentials: true, // include cookies
       });
 
