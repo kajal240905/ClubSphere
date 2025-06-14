@@ -38,11 +38,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser())
 app.use('/uploads', express.static('uploads'));
 
-
 app.use(cors({
-  origin: "http://localhost:5173", 
-  credentials: true               
+  origin: ['http://localhost:5173', 'https://club-sphere-dusky.vercel.app'],
+  credentials: true
 }));
+
 
 app.post('/register', register);
 app.post('/login', login);
