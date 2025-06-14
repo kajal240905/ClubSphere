@@ -9,7 +9,7 @@ export default function ViewUserProfile(){
  
   async function handleSubmit(){
     try{
-    const response1=await axios.get('http://localhost:3000/loginExecutive/viewExecutiveProfile',{
+    const response1=await axios.get('https://clubsphere-production.up.railway.app/loginExecutive/viewExecutiveProfile',{
         withCredentials:true,
     })
 setDetails(response1.data)
