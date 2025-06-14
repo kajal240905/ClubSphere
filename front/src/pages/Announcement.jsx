@@ -13,7 +13,7 @@ export default function Announcement(){
    async function handleClick(){
         try{
             const response1=await axios.get('https://clubsphere-production.up.railway.app/login/getAllAnnouncement',{
-            withCredentials: 'true',
+            withCredentials: true,
                 
         
             })
@@ -25,7 +25,7 @@ export default function Announcement(){
             try{
 
                   const response2=await axios.get('https://clubsphere-production.up.railway.app/loginExecutive/getAllAnnouncement',{
-            withCredentials: 'true',
+            withCredentials: true,
                
             })
             
