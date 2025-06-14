@@ -11,7 +11,7 @@ export default function RemoveMember() {
   async function handleSubmit() {
     try {
       const response = await axios.post(
-        'http://localhost:3000/loginExecutive/removeMember',
+        'https://clubsphere-production.up.railway.app/loginExecutive/removeMember',
         {
           email,
           club
