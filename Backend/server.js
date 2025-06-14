@@ -12,7 +12,7 @@ const http = require('http');
 const { addClub, addEvent,addPost,likePost,showPosts,deletePost,commentPost,announce,getAllAnnouncement,addMember
   ,viewUserProfile,viewExecutiveProfile,getParticipants,removeMember,deleteEvent
 } = require('./controllers/AdminController.js');
-const { GetEvent, EventRegistration ,getMember,getAllEvents } = require('./controllers/EventController.js');
+const { GetEvent, EventRegistration ,getMember,getAllEvents } = require('./controllers/eventController.js');
 const {verifyExecutive,verifyUser,checkClub} = require('./middleware/auth.js');
 const {addItem,removeItem,issueItem,returnItem,getItems }=require('./controllers/ItemsController.js')
 const {createOrder,verifyOrder} =require('./controllers/paymentController.js')
