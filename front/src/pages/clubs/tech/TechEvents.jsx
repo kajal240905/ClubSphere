@@ -10,7 +10,7 @@ export default function TechEvents(){
     const [Events,setEvents] = useState([])
    const handleClick = async()=>{
         try{
-       const res1 = await axios.get('http://localhost:3000/login/getAllEvents',{
+       const res1 = await axios.get('https://clubsphere-production.up.railway.app/login/getAllEvents',{
         withCredentials:'true',
         params:{
             clubName:'tech'
@@ -21,7 +21,7 @@ export default function TechEvents(){
     }
     catch(err1){
         try{
-  const res2= await axios.get('http://localhost:3000/loginExecutive/getAllEvents',{
+  const res2= await axios.get('https://clubsphere-production.up.railway.app/loginExecutive/getAllEvents',{
         withCredentials:'true',
         params:{
             clubName:'tech'
