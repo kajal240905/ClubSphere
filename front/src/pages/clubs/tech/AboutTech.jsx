@@ -19,7 +19,7 @@ export default function AboutTech() {
 
   const handleClick = async () => {
     try {
-      const response1 = await axios.get('http://localhost:3000/login/getMember', {
+      const response1 = await axios.get('https://clubsphere-production.up.railway.app/login/getMember', {
         withCredentials: true,
         params: {
           club: 'tech'
@@ -29,7 +29,7 @@ export default function AboutTech() {
       setMember(response1.data);
     } catch (e1) {
       try {
-        const response2 = await axios.get('http://localhost:3000/loginExecutive/getMember', {
+        const response2 = await axios.get('https://clubsphere-production.up.railway.app/loginExecutive/getMember', {
           withCredentials: true,
           params: {
             club: 'tech'
