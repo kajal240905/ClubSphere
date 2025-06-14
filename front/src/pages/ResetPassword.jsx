@@ -12,7 +12,7 @@ export default function ResetPassword(){
   
  async function handleClick(){
     try{
-   const res = await axios.post(`http://localhost:3000/resetPassword?id=${id}&token=${token}`, {
+   const res = await axios.post(`https://clubsphere-production.up.railway.app/resetPassword?id=${id}&token=${token}`, {
         password
       });
       setMessage(res.data.message)
