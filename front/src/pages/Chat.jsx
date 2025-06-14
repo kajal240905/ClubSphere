@@ -12,7 +12,7 @@ export default function Chat() {
   async function handleSubmit(e) {
     e.preventDefault(); // Prevent page reload
     try {
-      const res1 = await axios.post('http://localhost:3000/login/aiChat',
+      const res1 = await axios.post('https://clubsphere-production.up.railway.app/login/aiChat',
         { msg },
         { withCredentials: true }
       );
@@ -20,7 +20,7 @@ export default function Chat() {
       console.log(res1.data.reply);
     } catch (e1) {
       try{
-      const res2 = await axios.post('http://localhost:3000/loginExecutive/aiChat',
+      const res2 = await axios.post('https://clubsphere-production.up.railway.app/loginExecutive/aiChat',
         { msg },
         { withCredentials: true }
       );
