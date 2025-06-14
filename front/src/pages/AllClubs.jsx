@@ -18,7 +18,7 @@ export default function AllClubs(){
     
    async function clickFunction(){
        try{
-        const res1=await axios.get('http://localhost:3000/login/viewUserProfile',{
+        const res1=await axios.get('https://clubsphere-production.up.railway.app/login/viewUserProfile',{
           withCredentials:true }
       )
        console.log(res1)
@@ -27,7 +27,7 @@ export default function AllClubs(){
     }
       catch(e){
         try{
-        const res2=await axios.get('http://localhost:3000/loginExecutive/viewExecutiveProfile',{
+        const res2=await axios.get('https://clubsphere-production.up.railway.app/loginExecutive/viewExecutiveProfile',{
           withCredentials:true }
       )
      
