@@ -12,7 +12,7 @@ export default function Announcement(){
     const [announces,setAnnounce]=useState([])
    async function handleClick(){
         try{
-            const response1=await axios.get('http://localhost:3000/login/getAllAnnouncement',{
+            const response1=await axios.get('https://clubsphere-production.up.railway.app/login/getAllAnnouncement',{
             withCredentials: true,
                 
         
@@ -24,7 +24,7 @@ export default function Announcement(){
 
             try{
 
-                  const response2=await axios.get('http://localhost:3000/loginExecutive/getAllAnnouncement',{
+                  const response2=await axios.get('https://clubsphere-production.up.railway.app/loginExecutive/getAllAnnouncement',{
             withCredentials: true,
                
             })
