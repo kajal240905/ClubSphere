@@ -16,53 +16,29 @@ export default function AllClubs(){
     const navigate=useNavigate()
     const [isOpen,setIsOpen]=useState(false)
     
-   // async function clickFunction(){
-   //     try{
-   //      const res1=await axios.get('https://clubsphere-production.up.railway.app/login/viewUserProfile',{
-   //        withCredentials:true }
-   //    )
-   //     console.log(res1)
+   async function clickFunction(){
+       try{
+        const res1=await axios.get('https://clubsphere-production.up.railway.app/login/viewUserProfile',{
+          withCredentials:true }
+      )
+       console.log(res1)
     
-   //    navigate('/viewUserProfile')
-   //  }
-   //    catch(e){
-   //      try{
-   //      const res2=await axios.get('https://clubsphere-production.up.railway.app/loginExecutive/viewExecutiveProfile',{
-   //        withCredentials:true }
-   //    )
-     
-   //    navigate('/adminPower')
-   //  }
-   //  catch(e2){
-   //    console.log("Both request failed",e,e2)
-   //  }
-   //    }
-   //  }
-    async function clickFunction() {
-  try {
-    const res1 = await axios.get('https://clubsphere-production.up.railway.app/login/viewUserProfile', {
-      withCredentials: true
-    });
-
-    // If res1.data indicates it's not the current user, skip
-    if (res1.data && res1.data.role === 'user') {
-      console.log(res1);
-      navigate('/viewUserProfile');
-      return;
+      navigate('/viewUserProfile')
     }
-  } catch (e) {
-    console.log("User profile failed, trying executive");
-  }
-
-  try {
-    const res2 = await axios.get('https://clubsphere-production.up.railway.app/loginExecutive/viewExecutiveProfile', {
-      withCredentials: true
-    });
-    navigate('/adminPower');
-  } catch (e2) {
-    console.log("Both requests failed", e2);
-  }
-}
+      catch(e){
+        try{
+        const res2=await axios.get('https://clubsphere-production.up.railway.app/loginExecutive/viewExecutiveProfile',{
+          withCredentials:true }
+      )
+     
+      navigate('/adminPower')
+    }
+    catch(e2){
+      console.log("Both request failed",e,e2)
+    }
+      }
+    }
+    
 
    useEffect(() => {
   AOS.init({ delay: 500, once: true });
