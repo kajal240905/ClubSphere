@@ -33,7 +33,7 @@ export default function ViewUserProfile() {
 
       <div className="bg-white w-full max-w-4xl rounded-xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
         
-        <div className="w-full md:w-1/2 w-[3/4] flex justify-center items-center p-6 bg-blue-100">
+        <div className="w-full md:w-1/2 w-[3/4] h-[50vh] flex justify-center items-center p-6 bg-blue-100">
           <img
             src={profile}
             alt="Profile"
