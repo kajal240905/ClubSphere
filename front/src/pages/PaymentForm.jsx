@@ -54,7 +54,7 @@ alert("Registered Successfully")
         handler: async (response) => {
           try {
            
-            const verifyRes = await axios.post('http://localhost:3000/login/verifyOrder', {
+            const verifyRes = await axios.post('https://club-sphere-dusky.vercel.app/login/verifyOrder', {
               razorpay_order_id: response.razorpay_order_id,
               razorpay_payment_id: response.razorpay_payment_id,
               razorpay_signature: response.razorpay_signature,
