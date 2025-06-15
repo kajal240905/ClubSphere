@@ -37,7 +37,7 @@ export default function ViewUserProfile() {
           <img
             src={profile}
             alt="Profile"
-            className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover"
+            className="w-24 h-24 md:w-48 md:h-48 rounded-full object-cover"
           />
         </div>
 
