@@ -45,7 +45,7 @@ export default function SignUp() {
 
       <div
         style={{ boxShadow: "0px 0px 15px #b026ff" }}
-        className="absolute md:h-[95vh] my-4 py-4 md:w-1/4 bg-black border-0.2 border-amber-200 shadow-2xl flex flex-col justify-center items-center w-[80vw] h-[80vh]"
+        className="absolute md:h-[95vh] my-4 py-4 md:w-1/4 bg-black border-0.2 border-amber-200 shadow-2xl flex flex-col justify-center items-center w-[80vw] h-[83vh]"
       >
         <h1
           style={{ fontFamily: "Playwrite HU, serif" }}
@@ -118,7 +118,7 @@ export default function SignUp() {
 
           <button
             type="submit"
-            className="bg-[#B026FF] text-black font-bold pt-2  mt-6 mb-2 rounded-md hover:cursor-pointer "
+            className="bg-[#B026FF] text-black font-bold p-2  mt-4 mb-2 rounded-md hover:cursor-pointer "
           >
             Register
           </button>
