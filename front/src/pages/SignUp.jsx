@@ -41,7 +41,7 @@ export default function SignUp() {
 
   return (
     <div className="flex relative h-screen w-full justify-center items-center bg-black">
-        <button style={{ fontFamily: "'Playwrite HU', serif" }} onClick={()=>navigate('/')} className=" z-50 p-4 absolute  top-6 left-10  bg-[#b026ff] rounded-xl border-none  px-2 py-1 border-2 hover:cursor-pointer">Back</button>
+        <button style={{ fontFamily: "'Playwrite HU', serif" }} onClick={()=>navigate('/')} className=" z-50 p-4 absolute  top-6 left-10   bg-[#b026ff] rounded-xl border-none  px-2 py-1 border-2 hover:cursor-pointer">Back</button>
 
       <div
         style={{ boxShadow: "0px 0px 15px #b026ff" }}
@@ -49,7 +49,7 @@ export default function SignUp() {
       >
         <h1
           style={{ fontFamily: "Playwrite HU, serif" }}
-          className="text-[#B026FF] text-3xl font-bold mb-16"
+          className="text-[#B026FF] text-3xl font-bold mb-16 pt-4"
         >
           SIGN UP
         </h1>
@@ -118,7 +118,7 @@ export default function SignUp() {
 
           <button
             type="submit"
-            className="bg-[#B026FF] text-black font-bold py-2 mt-6 rounded-md hover:cursor-pointer "
+            className="bg-[#B026FF] text-black font-bold pt-2 pb-6 mt-6 rounded-md hover:cursor-pointer "
           >
             Register
           </button>
