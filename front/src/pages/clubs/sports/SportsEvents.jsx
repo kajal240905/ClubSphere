@@ -51,15 +51,16 @@ return(
          { [...Events].reverse().map((event,index)=>(
                <div data-aos="fade-down"
                data-aos-delay={index*50}
-               key={index} className='bg-[#B0DB9C] text-[#994556] w-[60vw] mt-10 h-[30vh]  rounded-xl shadow-md shadow-[#994556] translate-transform 
+               key={index} className='bg-[#B0DB9C] text-[#994556] md:w-[60vw]  w-[75vw]  h-[40vw] mt-10 md:h-[30vh]  rounded-xl shadow-md shadow-[#994556] translate-transform 
                duration-300 transform translate-z-[200] hover:scale-105 hover:bg-green-200 overflow-y-auto'>
                 <div className='text-xl pt-4'>{event.name}</div>
                 <div className='mt-2 text-black'>{event.description}</div>
                 <div className=' mt-2 '><strong>Head</strong>-{event.eventHead}</div>
                  <div className='mt-2 text-black'>Registration Fee-{event.registrationFee}₹</div> 
-                  <div className="text-black text-sm pt-1 md:pt-2">
-  {new Date(event.eventDate).toLocaleDateString()} at {event.eventTime}
+               <div className="text-black text-sm pt-1 md:pt-2">
+  {new Date(event.eventDateTime).toLocaleDateString()} at {new Date(event.eventDateTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
 </div>
+
                 <button onClick={()=>navigate('/payment',{
                    state:{fee:event.registrationFee,eventName:event.name}
                 })} className="bg-[#994556] rounded-xl mt-2 text-white mb-4 p-2">Register Now</button>
