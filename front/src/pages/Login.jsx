@@ -69,7 +69,7 @@ export default function Login() {
       >
         <h1
           style={{ fontFamily: "'Playwrite HU', serif" }}
-          className="text-[#B026FF] md:text-5xl text-2xl  mt-2"
+          className="text-[#B026FF] md:text-3xl text-2xl  mt-2"
         >
           LOGIN
         </h1>
