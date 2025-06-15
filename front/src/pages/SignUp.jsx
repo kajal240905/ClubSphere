@@ -40,7 +40,7 @@ export default function SignUp() {
   };
 
   return (
-    <div  style={{ fontFamily: "Playwrite HU, serif" }} className="flex relative h-screen w-full justify-center items-center bg-black">
+    <div   className="flex relative h-screen w-full justify-center items-center bg-black">
         <button style={{ fontFamily: "'Playwrite HU', serif" }} onClick={()=>navigate('/')} className=" z-50 p-4 absolute  top-6 left-10   bg-[#b026ff] rounded-xl border-none  mb-4 px-2 py-1 border-2 hover:cursor-pointer">Back</button>
 
       <div
@@ -55,7 +55,7 @@ export default function SignUp() {
         </h1>
 
         <form className="flex flex-col gap-4 w-full px-8" onSubmit={handleSign}>
-          <label className="text-white">Full Name</label>
+          <label  style={{ fontFamily: "Playwrite HU, serif" }} className="text-white">Full Name</label>
           <input
             type="text"
             value={name}
@@ -65,7 +65,7 @@ export default function SignUp() {
             required
           />
 
-          <label className="text-white">Email</label>
+          <label style={{ fontFamily: "Playwrite HU, serif" }} className="text-white">Email</label>
           <input
             type="email"
             value={email}
@@ -75,7 +75,7 @@ export default function SignUp() {
             required
           />
 
-          <label className="text-white">Password</label>
+          <label style={{ fontFamily: "Playwrite HU, serif" }} className="text-white">Password</label>
           <input
             type="password"
             value={password}
@@ -85,7 +85,7 @@ export default function SignUp() {
             required
           />
 
-          <label className="text-white">Role</label>
+          <label style={{ fontFamily: "Playwrite HU, serif" }} className="text-white">Role</label>
           <select
             value={role}
             onChange={(e) => setRole(e.target.value)}
@@ -99,7 +99,7 @@ export default function SignUp() {
 
           {role === "member" && (
             <>
-              <label className="text-white">Club Name</label>
+              <label style={{ fontFamily: "Playwrite HU, serif" }} className="text-white">Club Name</label>
               <select
                 value={club}
                 onChange={(e) => setClub(e.target.value)}
@@ -116,7 +116,7 @@ export default function SignUp() {
             </>
           )}
 
-          <button
+          <button style={{ fontFamily: "Playwrite HU, serif" }}
             type="submit"
             className="bg-[#B026FF] text-black font-bold p-2  mt-4 mb-2 rounded-md hover:cursor-pointer "
           >
