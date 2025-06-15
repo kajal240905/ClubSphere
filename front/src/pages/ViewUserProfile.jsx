@@ -33,24 +33,21 @@ export default function ViewUserProfile() {
 
       <div className="bg-white w-full max-w-4xl rounded-xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
         
-        <div className="flex-1 bg-blue-100 flex justify-center items-center p-6">
+        <div className="w-full md:w-1/2 flex justify-center items-center p-6 bg-blue-100">
           <img
             src={profile}
             alt="Profile"
-            className="w-48 h-48 rounded-full object-cover"
+            className="w-40 h-40 md:w-48 md:h-48 rounded-full object-cover"
           />
         </div>
 
-        <div className="flex-1 flex flex-col justify-center p-6 text-xl space-y-4">
+        <div className="w-full md:w-1/2 flex flex-col justify-center p-6 text-lg md:text-xl space-y-4">
           <div><strong>Name</strong>: {details.name}</div>
           <div><strong>Branch</strong>: {details.branch?.toUpperCase()}</div>
-          <div>
-            <strong>Role</strong>: {details.role?.charAt(0).toUpperCase() + details.role?.slice(1).toLowerCase()}
-          </div>
+          <div><strong>Role</strong>: {details.role?.charAt(0).toUpperCase() + details.role?.slice(1).toLowerCase()}</div>
           <div><strong>Enrollment Year</strong>: 20{details.year}</div>
         </div>
       </div>
     </div>
   )
 }
-
