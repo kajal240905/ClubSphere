@@ -9,7 +9,7 @@ const nodemailer=require('nodemailer')
 dotenv.config();
 
 const register = async (req, res) => {
-  const { name, email, password, role, club: clubName } = req.body;
+  const { name, email, password } = req.body;
   console.log(req.body);
   try {
     const studentEmailRegex = /^(bt|mt|phd)(\d{2})(cse|ece|eee|mec|civ)(\d{3})@nituk\.ac\.in$/;
@@ -28,39 +28,25 @@ const register = async (req, res) => {
       return res.status(400).json({ message: 'user already exists' });
     }
 
-    if (role === 'executive') {
-      return res.status(400).json({ message: 'executive role is not allowed for students' });
-    }
-
+ 
     const salt = await bcrypt.genSalt(10);
     const hashedPassword = await bcrypt.hash(password, salt);
 
-    let clubname = null;
-    if (role === 'member') {
-      clubname = await Club.findOne({ name: clubName });
-      if (!clubname) {
-        return res.status(400).json({ message: 'Club not found' });
-      }
-    }
+    
 
     const newUser = new User({
       name,
       email,
       password: hashedPassword,
-      role,
+      role:'user',
       year,
       branch,
       roll,
       course,
-      club: clubname ? clubname._id : null
+      club: null
     });
 
     await newUser.save();
-
-    if (role === 'member') {
-      clubname.members.push(newUser._id);
-      await clubname.save();
-    }
 
     
     const token = jwt.sign({ email: newUser.email }, process.env.SECRET_KEY, { expiresIn: '1h' });
@@ -78,8 +64,6 @@ const register = async (req, res) => {
     res.status(500).json({ message: 'Internal server error', error: e.message });
   }
 };
-
-
 const login = async (req,res)=>{
     const {email,password}=req.body;
     try{
