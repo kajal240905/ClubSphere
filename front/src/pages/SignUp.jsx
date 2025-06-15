@@ -41,7 +41,7 @@ export default function SignUp() {
 
   return (
     <div   className="flex relative h-screen w-full justify-center items-center bg-black">
-        <button style={{ fontFamily: "'Playwrite HU', serif" }} onClick={()=>navigate('/')} className=" z-50 p-4 absolute  top-6 left-10   bg-[#b026ff] rounded-xl border-none  mb-4 px-2 py-1 border-2 hover:cursor-pointer">Back</button>
+        <button style={{ fontFamily: "'Playwrite HU', serif" }} onClick={()=>navigate('/')} className=" z-50 p-4 absolute  top-6 left-12   bg-[#b026ff] rounded-xl border-none  mb-4 px-2 py-1 border-2 hover:cursor-pointer">Back</button>
 
       <div
         style={{ boxShadow: "0px 0px 15px #b026ff" }}
