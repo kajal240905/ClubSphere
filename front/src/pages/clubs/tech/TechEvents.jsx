@@ -51,7 +51,7 @@ return(
          {  [...Events].reverse().map((event,index)=>(
                <div data-aos="fade-down"
                data-aos-delay={index*50}
-               key={index} className='bg-zinc-700 text-[#00ffee] w-[60vw] mt-10 h-[30vh] rounded-xl shadow-md shadow-[#00ffee] translate-transform 
+               key={index} className='bg-zinc-700 text-[#00ffee] md:w-[60vw] w-[75vw] mt-10 h-[30vh] rounded-xl shadow-md shadow-[#00ffee] translate-transform 
                duration-300 transform translate-z-[200] hover:scale-105 hover:bg-zinc-600 overflow-y-auto'>
                 <div style={{ fontFamily: "'Orbitron', sans-serif" }} className='text-xl pt-4'>{event.name}</div>
                 <div className='mt-2 text-white'>{event.description}</div>
