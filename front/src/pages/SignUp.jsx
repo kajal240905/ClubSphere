@@ -7,8 +7,7 @@ export default function SignUp() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("");
-  const [club, setClub] = useState(""); 
+  
 
   const handleSign = async (e) => {
     e.preventDefault();
@@ -17,13 +16,10 @@ export default function SignUp() {
       const payload = {
         name,
         email,
-        password,
-        role
+        password
       };
 
-      if (role === "member") {
-        payload.club = club;
-      }
+    
 
       const res = await axios.post("https://clubsphere-production.up.railway.app/register", payload, {
         withCredentials: true, // include cookies
@@ -45,7 +41,7 @@ export default function SignUp() {
 
       <div
         style={{ boxShadow: "0px 0px 15px #b026ff" }}
-        className="absolute  my-4 py-4 md:w-1/4 bg-black border-0.2 border-amber-200 shadow-2xl flex flex-col justify-center items-center w-[80vw] h-[98vh] overflow-y-auto"
+        className="absolute  my-4 py-4 md:w-1/4 bg-black border-0.2 border-amber-200 shadow-2xl flex flex-col justify-center items-center w-[80vw] h-[70vh] "
       >
         <h1
           style={{ fontFamily: "Playwrite HU, serif" }}
@@ -85,37 +81,7 @@ export default function SignUp() {
             required
           />
 
-          <label style={{ fontFamily: "Playwrite HU, serif" }} className="text-white">Role</label>
-          <select
-            value={role}
-            onChange={(e) => setRole(e.target.value)}
-            className="p-2 rounded-md border border-gray-300 bg-gray-800 text-white"
-            required
-          >
-            <option value="">Select Role</option>
-            <option value="member">Member</option>
-            <option value="user">User</option>
-          </select>
-
-          {role === "member" && (
-            <>
-              <label style={{ fontFamily: "Playwrite HU, serif" }} className="text-white">Club Name</label>
-              <select
-                value={club}
-                onChange={(e) => setClub(e.target.value)}
-                className="p-2 rounded-md border border-gray-300 bg-gray-800 text-white"
-                required
-              >
-                <option value="">Select Club</option>
-                <option value="cfac">CFAC</option>
-                <option value="tech">Technical</option>
-                <option value="literary">Literary</option>
-                <option value="sports">Sports</option>
-                <option value="photography">Photography</option>
-              </select>
-            </>
-          )}
-
+         
           <button style={{ fontFamily: "Playwrite HU, serif" }}
             type="submit"
             className="bg-[#B026FF] text-black font-bold p-2  mt-4 mb-2 rounded-md hover:cursor-pointer "
