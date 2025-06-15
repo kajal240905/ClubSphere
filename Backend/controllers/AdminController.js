@@ -112,7 +112,7 @@ const addPost=async(req,res)=>{
 
 
 
-   const imageUrl=`http://localhost:3000/uploads/${req.file.filename}`
+   const imageUrl=`https://clubsphere-production.up.railway.app/uploads/${req.file.filename}`
 
   const newPost=await Post.create({
     title,
