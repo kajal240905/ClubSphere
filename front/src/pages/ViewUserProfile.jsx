@@ -31,19 +31,26 @@ export default function ViewUserProfile() {
         Back
       </button>
 
-      <div className="bg-white w-full max-w-lg rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300 p-6 flex flex-col items-center text-center">
-        <img
-          src={profile}
-          alt="Profile"
-          className="w-36 h-36 rounded-full object-cover mx-auto mb-6"
-        />
-        <div className="mb-2"><strong>Name</strong>: {details.name}</div>
-        <div className="mb-2"><strong>Branch</strong>: {details.branch?.toUpperCase()}</div>
-        <div className="mb-2">
-          <strong>Role</strong>: {details.role?.charAt(0).toUpperCase() + details.role?.slice(1).toLowerCase()}
+      <div className="bg-white w-full max-w-4xl rounded-xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
+        
+        <div className="flex-1 bg-blue-100 flex justify-center items-center p-6">
+          <img
+            src={profile}
+            alt="Profile"
+            className="w-48 h-48 rounded-full object-cover"
+          />
         </div>
-        <div><strong>Enrollment Year</strong>: 20{details.year}</div>
+
+        <div className="flex-1 flex flex-col justify-center p-6 text-xl space-y-4">
+          <div><strong>Name</strong>: {details.name}</div>
+          <div><strong>Branch</strong>: {details.branch?.toUpperCase()}</div>
+          <div>
+            <strong>Role</strong>: {details.role?.charAt(0).toUpperCase() + details.role?.slice(1).toLowerCase()}
+          </div>
+          <div><strong>Enrollment Year</strong>: 20{details.year}</div>
+        </div>
       </div>
     </div>
   )
 }
+
