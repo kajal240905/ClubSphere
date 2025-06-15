@@ -51,7 +51,7 @@ return(
          { [...Events].reverse().map((event,index)=>(
                <div data-aos="fade-down"
                data-aos-delay={index*50}
-               key={index} className='bg-[#91AC8F] text-[#690B22] w-[60vw]  scroll-hidden overflow-y-scroll mt-10 h-[30vh] rounded-xl shadow-md shadow-[#690B22] translate-transform 
+               key={index} className='bg-[#91AC8F] text-[#690B22] md:w-[60vw] w-[75vw]  scroll-hidden overflow-y-scroll mt-10 h-[30vh] rounded-xl shadow-md shadow-[#690B22] translate-transform 
                duration-300 transform translate-z-[200] hover:scale-105 hover:bg-gray-300'>
                 <div className='text-xl pt-4'>{event.name}</div>
                 <div className='mt-2 text-black'>{event.description}</div>
