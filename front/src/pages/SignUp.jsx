@@ -45,7 +45,7 @@ export default function SignUp() {
 
       <div
         style={{ boxShadow: "0px 0px 15px #b026ff" }}
-        className="absolute  my-4 py-4 md:w-1/4 bg-black border-0.2 border-amber-200 shadow-2xl flex flex-col justify-center items-center w-[80vw] h-[98vh]"
+        className="absolute  my-4 py-4 md:w-1/4 bg-black border-0.2 border-amber-200 shadow-2xl flex flex-col justify-center items-center w-[80vw] h-[98vh] overflow-y-auto"
       >
         <h1
           style={{ fontFamily: "Playwrite HU, serif" }}
