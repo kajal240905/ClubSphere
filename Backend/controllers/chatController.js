@@ -34,7 +34,7 @@ const aiChat = async (req, res) => {
     sessions[userId].push({ role: 'assistant', content: reply });
 
     return res.json({ reply });
-  } } catch (e) {
+  }  catch (e) {
     console.error(e);
     return res.status(500).json('Internal server error');
   }
