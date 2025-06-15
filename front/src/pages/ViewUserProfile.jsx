@@ -32,8 +32,8 @@ export default function ViewUserProfile() {
         Back
       </button>
 
-      <div className="bg-white w-full max-w-lg rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300 text-xl text-center p-6 flex flex-col items-center">
-        <img className="w-[140px] h-[140px] mb-4 object-cover rounded-full" src={profile} alt="Profile" />
+      <div className="bg-white md:w-full  w-[80vw] max-w-lg rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300 text-xl text-center p-6 flex flex-col items-center">
+        <img className="w-[100px] h-[100px] mb-4 object-cover rounded-full" src={profile} alt="Profile" />
 
         <div className="mb-2"><strong>Name</strong>: {details.name}</div>
         <div className="mb-2"><strong>Branch</strong>: {details.branch?.toUpperCase()}</div>
