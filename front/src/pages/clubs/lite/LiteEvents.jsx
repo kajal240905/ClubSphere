@@ -57,9 +57,10 @@ return(
                 <div className='mt-2 text-black'>{event.description}</div>
                 <div className=' mt-2 '><strong>Head</strong>-{event.eventHead}</div>
                 <div className='mt-2 text-black'>Registration Fee-{event.registrationFee}₹</div>
-                 <div className="text-blue-900 text-sm pt-1 md:pt-2">
-  {new Date(event.eventDate).toLocaleDateString()} at {event.eventTime}
+                 <div className="text-white text-sm pt-1 md:pt-2">
+  {new Date(event.eventDateTime).toLocaleDateString()} at {new Date(event.eventDateTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
 </div>
+
                 <button onClick={()=>navigate('/payment',{
                    state:{fee:event.registrationFee,eventName:event.name}
                 })}  className="bg-[#4F1C51] rounded-xl mt-2 pb-6 text-white p-2 mb-4">Register Now</button>
