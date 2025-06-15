@@ -44,7 +44,7 @@ export default function ViewUserProfile() {
               ? details.role.charAt(0).toUpperCase() + details.role.slice(1).toLowerCase()
               : 'Loading...'}
           </p>
-          <p><strong>Enrollment Year:</strong> {details?.year ? `20${details.year}` : 'Loading...'}</p>
+         
         </div>
       </div>
     </div>
