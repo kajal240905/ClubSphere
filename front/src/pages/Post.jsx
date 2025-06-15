@@ -55,7 +55,7 @@ export default function Post() {
 
   async function handleClick() {
     try {
-      const res1 = await axios.get('http://localhost:3000/login/getAllPosts', {
+      const res1 = await axios.get('https://clubsphere-production.up.railway.app/login/getAllPosts', {
         withCredentials: true
       })
       setPost(res1.data.posts)
