@@ -40,7 +40,7 @@ export default function SignUp() {
   };
 
   return (
-    <div className="flex relative h-screen w-full justify-center items-center bg-black">
+    <div  style={{ fontFamily: "Playwrite HU, serif" }} className="flex relative h-screen w-full justify-center items-center bg-black">
         <button style={{ fontFamily: "'Playwrite HU', serif" }} onClick={()=>navigate('/')} className=" z-50 p-4 absolute  top-6 left-10   bg-[#b026ff] rounded-xl border-none  mb-4 px-2 py-1 border-2 hover:cursor-pointer">Back</button>
 
       <div
