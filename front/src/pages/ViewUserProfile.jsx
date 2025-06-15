@@ -1,53 +1,52 @@
-import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
-import { useState, useEffect } from 'react'
-import profile from '../assets/profile2.png'
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import profile from '../assets/profile2.png';
 
 export default function ViewUserProfile() {
-  const navigate = useNavigate()
-  const [details, setDetails] = useState('')
-
-  async function handleSubmit() {
-    try {
-      const response1 = await axios.get('https://clubsphere-production.up.railway.app/login/viewUserProfile', {
-        withCredentials: true,
-      })
-      setDetails(response1.data)
-    } catch (e) {
-      console.log(e)
-    }
-  }
+  const navigate = useNavigate();
+  const [details, setDetails] = useState(null);
 
   useEffect(() => {
-    handleSubmit()
-  }, [])
+    async function fetchProfile() {
+      try {
+        const response = await axios.get('https://clubsphere-production.up.railway.app/login/viewUserProfile', {
+          withCredentials: true,
+        });
+        setDetails(response.data);
+        console.log(response.data);
+      } catch (e) {
+        console.error('Error fetching profile:', e);
+      }
+    }
+
+    fetchProfile();
+  }, []);
 
   return (
-    <div className="bg-blue-200 w-full min-h-screen flex justify-center items-center px-4 py-8 relative text-black">
+    <div className="bg-blue-200 relative w-full min-h-screen flex items-center justify-center text-black">
       <button
         onClick={() => navigate('/allClubs')}
-        className="bg-blue-600 absolute top-4 left-4 text-white rounded-xl hover:bg-blue-700 px-4 py-2"
+        className="absolute top-5 left-5 bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700"
       >
         Back
       </button>
 
-      <div className="bg-white w-full max-w-4xl rounded-xl shadow-2xl flex flex-col md:flex-row overflow-hidden">
-        
-        <div className="w-full md:w-1/2 w-[3/4] md:h-[60vh] flex justify-center items-center p-6 bg-blue-100">
-          <img
-            src={profile}
-            alt="Profile"
-            className="w-24 h-24 md:w-48 md:h-48 rounded-full object-cover"
-          />
-        </div>
+      <div className="bg-white rounded-xl shadow-2xl p-6 w-[90vw] md:w-[45vw] max-w-[600px] flex flex-col items-center transition-transform transform hover:scale-105">
+        <img src={profile} alt="Profile" className="w-40 h-40 rounded-full object-cover mb-4" />
 
-        <div className="w-full md:w-1/2 flex flex-col justify-center p-6 text-lg md:text-xl space-y-4">
-          <div><strong>Name</strong>: {details.name}</div>
-          <div><strong>Branch</strong>: {details.branch?.toUpperCase()}</div>
-          <div><strong>Role</strong>: {details.role?.charAt(0).toUpperCase() + details.role?.slice(1).toLowerCase()}</div>
-          <div><strong>Enrollment Year</strong>: 20{details.year}</div>
+        <div className="text-lg text-left w-full px-4">
+          <p><strong>Name:</strong> {details?.name || 'Loading...'}</p>
+          <p><strong>Branch:</strong> {details?.branch?.toUpperCase() || 'Loading...'}</p>
+          <p>
+            <strong>Role:</strong>{' '}
+            {details?.role
+              ? details.role.charAt(0).toUpperCase() + details.role.slice(1).toLowerCase()
+              : 'Loading...'}
+          </p>
+          <p><strong>Enrollment Year:</strong> {details?.year ? `20${details.year}` : 'Loading...'}</p>
         </div>
       </div>
     </div>
-  )
+  );
 }
