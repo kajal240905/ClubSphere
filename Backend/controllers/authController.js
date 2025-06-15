@@ -227,7 +227,12 @@ const loginExecutive = async (req,res)=>{
             return res.status(400).json({message:"Invalid credentials"})
         }
         const token=jwt.sign({email:executive.email},process.env.SECRET_KEY,{expiresIn:"1h"});
-          res.cookie('token', token, { maxAge: 60 * 60 * 1000 });
+           res.cookie('token', token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: 'None',
+  maxAge: 60 * 60 * 1000 // 1 hour
+});
         res.status(200).json({message:"User login successful",
       
             token,
