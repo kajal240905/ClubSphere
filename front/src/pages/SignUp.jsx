@@ -84,7 +84,7 @@ export default function SignUp() {
          
           <button style={{ fontFamily: "Playwrite HU, serif" }}
             type="submit"
-            className="bg-[#B026FF] text-black font-bold p-2  mt-4 mb-2 rounded-md hover:cursor-pointer "
+            className="bg-[#B026FF] text-black font-bold p-2  mt-4 mb-4 rounded-md hover:cursor-pointer "
           >
             Register
           </button>
