@@ -13,7 +13,6 @@ export default function ViewUserProfile() {
         withCredentials: true,
       })
       setDetails(response1.data)
-      console.log(response1.data)
     } catch (e) {
       console.log(e)
     }
@@ -24,7 +23,7 @@ export default function ViewUserProfile() {
   }, [])
 
   return (
-    <div className="bg-blue-200 relative text-black w-full min-h-screen overflow-hidden flex justify-center items-center px-4 py-8">
+    <div className="bg-blue-200 w-full min-h-screen flex justify-center items-center px-4 py-8 relative text-black">
       <button
         onClick={() => navigate('/allClubs')}
         className="bg-blue-600 absolute top-4 left-4 text-white rounded-xl hover:bg-blue-700 px-4 py-2"
@@ -32,9 +31,12 @@ export default function ViewUserProfile() {
         Back
       </button>
 
-      <div className="bg-white md:w-full  w-[80vw] max-w-lg rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300 text-xl text-center p-6 flex flex-col items-center">
-        <img className="md:w-[180px] md:h-[180px] w-[100px] h-[100px] mb-4 object-cover rounded-full" src={profile} alt="Profile" />
-
+      <div className="bg-white w-full max-w-lg rounded-xl shadow-2xl hover:scale-105 transition-transform duration-300 p-6 flex flex-col items-center text-center">
+        <img
+          src={profile}
+          alt="Profile"
+          className="w-36 h-36 rounded-full object-cover mx-auto mb-6"
+        />
         <div className="mb-2"><strong>Name</strong>: {details.name}</div>
         <div className="mb-2"><strong>Branch</strong>: {details.branch?.toUpperCase()}</div>
         <div className="mb-2">
