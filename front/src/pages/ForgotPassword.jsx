@@ -24,12 +24,12 @@ export default function ForgotPassword(){
   <>
    <div className ="relative min-h-screen w-full bg-zinc-900 overflow-hidden flex flex-col justify-center  items-center">
             <button  onClick={()=>navigate('/login')} className="absolute top-4 left-4  rounded-xl p-2 text-white bg-[#B026FF] self-start">Back</button>
-         <div className="absolute bg-zinc-700 rounded-xl w-[50vw] h-[50vh] items-center justify-center text-xl flex flex-col shadow-[0_0_12px_#B026FF]">
+         <div className="absolute bg-zinc-700 rounded-xl md:w-[50vw] h-[50vh] w-[70vw] items-center justify-center text-xl flex flex-col shadow-[0_0_12px_#B026FF]">
            
           <input
             id="email"
             type="email"
-            className="bg-white p-2 rounded-xl  w-[30vw]"
+            className="bg-white p-2 rounded-xl  md:w-[30vw] w-[50vw]"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter college email"
