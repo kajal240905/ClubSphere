@@ -56,7 +56,7 @@ return(
                 <div style={{ fontFamily: "'Orbitron', sans-serif" }} className='text-xl pt-4'>{event.name}</div>
                 <div className='mt-2 text-white'>{event.description}</div>
                 <div className=' mt-2 '><strong>Head</strong>-{event.eventHead}</div>
-                <div className="text-blue-900 text-sm pt-1 md:pt-2">
+                <div className="text-white text-sm pt-1 md:pt-2">
   {new Date(event.eventDateTime).toLocaleDateString()} at {new Date(event.eventDateTime).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
 </div>
                 <div className='mt-2 text-white'>Registration Fee-{event.registrationFee}₹</div>
