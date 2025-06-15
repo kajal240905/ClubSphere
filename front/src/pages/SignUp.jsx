@@ -49,7 +49,7 @@ export default function SignUp() {
       >
         <h1
           style={{ fontFamily: "Playwrite HU, serif" }}
-          className="text-[#B026FF] text-3xl font-bold mb-12 mt-4 pt-4"
+          className="text-[#B026FF] text-3xl font-bold mb-8 mt-4 pt-4"
         >
           SIGN UP
         </h1>
