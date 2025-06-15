@@ -29,7 +29,7 @@ export default function ForgotPassword(){
           <input
             id="email"
             type="email"
-            className="bg-white p-2 rounded-xl  md:w-[30vw] w-[50vw]"
+            className="bg-white p-2 rounded-xl  md:w-[30vw] w-[55vw]"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             placeholder="Enter college email"
