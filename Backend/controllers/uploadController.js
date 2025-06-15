@@ -19,7 +19,7 @@ const uploadImage=(req,res)=>{
     }
     return res.status(200).json({
         message:'Image uploaded successfully',
-        filepath:`http://localhost:3000/uploads/${req.file.filename}`
+        filepath:`https://clubsphere-production.up.railway.app/uploads/${req.file.filename}`
     })
 }
 module.exports={
