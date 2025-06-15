@@ -195,7 +195,12 @@ const registerExecutive= async (req,res)=>{
     await newExecutive.save();
 
    const token = jwt.sign({ email: newExecutive.email }, process.env.SECRET_KEY, { expiresIn: '1h' });
-     res.cookie('token', token, { maxAge: 60 * 60 * 1000 }); 
+       res.cookie('token', token, {
+  httpOnly: true,
+  secure: true,
+  sameSite: 'None',
+  maxAge: 60 * 60 * 1000 // 1 hour
+});
    res.status(201).json({
       message: 'User registered successfully',
       token,
