@@ -64,7 +64,7 @@ export default function AllClubs(){
 
            <h1 className="text-2xl md:text-4xl text-[#B026FF] text-center mt-7">OUR CLUBS</h1> 
 
-           <div className="flex flex-wrap justify-center gap-8 px-4 pb-8">
+           <div className="flex flex-wrap justify-center gap-16 px-4 pb-8">
              
              <div data-aos="left" className="w-full max-w-[300px] h-[420px] mt-10 border-black-300 rounded-xl shadow-blue-600 shadow-lg bg-gray-900 overflow-hidden hover:shadow-blue-600 hover:scale-105 transition-transform duration-300 mx-auto">
                <img className="w-full h-80 object-cover" src={tech} loading="lazy" alt="..." />
