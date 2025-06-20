@@ -154,7 +154,7 @@ export default function AddPost() {
 
     try {
       const response = await axios.post(
-        'http://localhost:3000/loginExecutive/uploadPost',
+        'https://clubsphere-production.up.railway.app/loginExecutive/uploadPost',
         formData,
         {
           headers: {
