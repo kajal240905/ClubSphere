@@ -7,7 +7,9 @@ const bcrypt = require('bcrypt');
 const { Server } = require('socket.io');
 const cookieParser=require('cookie-parser')
 const multer = require('multer')
-const {upload,uploadImage} = require('./controllers/uploadController.js') 
+//  const {upload,uploadImage} = require('./controllers/uploadController.js') 
+const { upload} = require('./config/cloudinaryConfig.js')
+const { uploadPost } = require('./controllers/postController');
 const http = require('http');
 const { addClub, addEvent,addPost,likePost,showPosts,deletePost,commentPost,announce,getAllAnnouncement,addMember
   ,viewUserProfile,viewExecutiveProfile,getParticipants,removeMember,deleteEvent
@@ -58,7 +60,8 @@ app.post('/loginExecutive/addEvent', verifyExecutive,addEvent);
 app.get('/login/event',verifyUser, GetEvent);
 app.get('/loginExecutive/event',verifyExecutive, GetEvent);
 app.post('/login/:eventName/registerIn',verifyUser, EventRegistration);
-app.post('/loginExecutive/addPost',verifyExecutive,upload.single('image'),addPost)
+// app.post('/loginExecutive/addPost',verifyExecutive,upload.single('image'),addPost)
+app.post('/loginExecutive/uploadPost',verifyExecutive,upload.single('image'),uploadPost)
 app.post('/login/likePost',verifyUser,likePost)
 app.post('/loginExecutive/likePost',verifyExecutive,likePost)
 app.get('/login/getAllPosts',verifyUser,showPosts);
