@@ -1,3 +1,1 @@
-remove member
-remove add
 
